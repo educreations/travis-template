@@ -28,3 +28,11 @@ install:
   - pip install -r requirements.txt
 
 script: true
+
+notifications:
+  hipchat:
+    format: html
+    template:
+    - ! '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
+    rooms:
+      secure: DMhJqCH2jxY799WMpfdWvh6WoA8kEbe41dvJ74RmPIk4ut+sJ4ZJhTZc81UzWOY5P/GaN4YEjB2K+x6tyBG8USyXrGBMGHAjujTiL/1gkHIV/Cn3OWKbHw72aaByEJAqdw46xaBUVhTlg8lAEPthDBeobIEllJEPGohNG/E5D80=
